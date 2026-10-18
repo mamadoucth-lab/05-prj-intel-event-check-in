@@ -348,6 +348,51 @@ select {
   color: #475569;
 }
 
+/* Attendee list */
+.attendee-list-section {
+  margin-top: 25px;
+}
+
+.attendee-list-section h3 {
+  color: #64748b;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.attendee-list {
+  list-style: none;
+  max-height: 260px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.attendee-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 15px;
+  background-color: #fff;
+}
+
+.attendee-list li + li {
+  border-top: 1px solid #f1f5f9;
+}
+
+.attendee-name {
+  color: #334155;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.attendee-team {
+  flex-shrink: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
   .hero {
@@ -380,5 +425,11 @@ select {
 
   .teams-grid {
     grid-template-columns: 1fr;
+  }
+
+  .attendee-list li {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3px;
   }
 }
